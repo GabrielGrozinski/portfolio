@@ -115,7 +115,7 @@ header {
     border-radius: 6px;
     cursor: pointer;
     color: #222222;
-    transition: 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .contato:hover {
