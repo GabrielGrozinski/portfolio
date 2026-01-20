@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    
+    <header>
+        <h1 class="titulo"><strong>Gabriel | Grozinski</strong></h1>
+        <nav onmouseleave="fecharCurriculo('curriculo', 'link')" class="link-curriculo" href="#">
+            <div id="link" class="link-fechado">
+                <i class="fa-solid fa-file"></i>
+                <i onclick="abrirCurriculo('curriculo', 'link')" onmouseenter="abrirCurriculo('curriculo', 'link')" id="seta-curriculo" class="fa-solid fa-angle-down"></i>
+            </div>
+
+            <div id="curriculo" class="link-aberto">
+                <a href="curriculo.docx" download>
+                    Currículo
+                    <i class="fa-solid fa-download"></i>
+                </a>
+            </div>
+        </nav>
+
+        <img class="perfil" src="https://avatars.githubusercontent.com/u/209504355?v=4" alt="Gabriel Grozinski">
+
+        <section class="descricao">
+            <h1 class="subtitulo">Olá, Meu Nome é <br> Gabriel Grozinski</h1>
+            <p class="subtitulo-descricao">Eu sou um desenvolvedor full-stack, com experiência em desenvolvimento web e mobile.</p>
+
+            <ul class="lista-contato">
+                <li 
+                id="email"
+                onclick="mudarTexto('email', 'gabrielgrozinski@gmail.com')" 
+                onmouseenter="mudarTexto('email', 'gabrielgrozinski@gmail.com')" 
+                onmouseleave="retornarTexto('email', 'EMAIL')" 
+                class="contato">
+                    EMAIL
+                </li>
+
+                <li 
+                id="telefone"
+                onclick="mudarTexto('telefone', '+55 11 94444-5511')"
+                onmouseenter="mudarTexto('telefone', '+55 11 94444-5511')" 
+                onmouseleave="retornarTexto('telefone', 'TELEFONE')" 
+                class="contato">
+                    TELEFONE
+                </li>
+
+                <li 
+                id="github"
+                onclick="mudarTexto('github', 'https://github.com/GabrielGrozinski')"
+                onmouseenter="mudarTexto('github', 'https://github.com/GabrielGrozinski')" 
+                onmouseleave="retornarTexto('github', 'GITHUB')" 
+                class="contato">
+                    GITHUB
+                </li>
+            </ul>
+        </section>
+    </header>
+
+    <main>
+        <section>
+            <h1 id="habilidade-titulo">
+                MINHAS HABILIDADES
+            </h1>
+
+            <ul class="lista-habilidade">
+                <li class="item-habilidade">
+                    HTML 5
+                    <img src="assets/html.png" alt="">
+                </li>
+
+                <li class="item-habilidade">
+                    CSS 3
+                    <img src="assets/css.png" alt="">
+                </li>
+
+                <li class="item-habilidade">
+                    TypeScript
+                    <img src="assets/typescript.png" alt="">
+                </li>
+
+                <li class="item-habilidade">
+                    React
+                    <img src="assets/react.png" alt="">
+                </li>
+
+                <li class="item-habilidade">
+                    React Native
+                    <img src="assets/react native.png" alt="">
+                </li>
+
+                <li class="item-habilidade">
+                    Tailwind
+                    <img src="assets/tailwind.png" alt="">
+                </li>
+
+                <li class="item-habilidade">
+                    Supabase
+                    <img src="assets/supabase.png" alt="">
+                </li>
+
+                <li class="item-habilidade">
+                    Firebase
+                    <img src="assets/firebase.png" alt="">
+                </li>
+
+                <li class="item-habilidade">
+                    Mongo DB
+                    <img src="assets/mongodb.png" alt="">
+                </li>
+
+                <li class="item-habilidade">
+                    Axios
+                    <img src="assets/axios.png" alt="">
+                </li>
+
+                <li class="item-habilidade">
+                    Node.js
+                    <img src="assets/node.png" alt="">
+                </li>
+
+                <li class="item-habilidade">
+                    Git e GitHub
+                    <img src="assets/git.png" alt="">
+                </li>
+            </ul>
+        </section>
+
+        <section class="projetos-section">
+            <h1 class="projetos-titulo">MEUS PROJETOS</h1>
+
+            <article class="projeto-article">
+                <h2 class="titulo-projeto">ViaJour</h2>
+                <h3 class="subtitulo-projeto">Site de viagens</h3>
+                <div>
+                    <img src="" alt="">
+                    <p></p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
