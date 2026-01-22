@@ -382,7 +382,7 @@ header {
 
 .container-quebra {
     display: flex;
-    margin: 9px 0;
+    margin: 14px 0;
     justify-content: center;
 }
 
@@ -402,6 +402,89 @@ header {
   stroke: currentColor;
   stroke-width: 2;
   opacity: 0.6;
+}
+
+footer {
+    margin-top: 20vh;
+    padding: 30px;
+    width: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+}
+
+.ropade-titulo {
+    border-bottom: 1.4px solid #0000002a;
+    padding-bottom: 20px;
+}
+
+.ropade-titulo h1 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.ropade-titulo h2 {
+    font-weight: 300;
+    font-size: 0.9em;
+    max-width: 80%;
+    margin: 6px 0px 20px 0px;
+}
+
+.ropade-titulo h3 {
+    font-weight: 300;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+}
+
+.rodape-navegacao {
+    border-bottom: 1.4px solid #0000002a;
+    padding-bottom: 10px;
+}
+
+.rodape-navegacao h1 {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.rodape-navegacao a {
+    display: block;
+    font-weight: 400;
+    font-size: 1em;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #2563eb;
+    text-decoration: none;
+    max-width: 50%;
+}
+
+.rodape-contato {
+    padding-bottom: 10vh;
+}
+
+.rodape-contato h1 {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.rodape-contato a {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #06b6d4;
+    text-decoration: none;
+    font-size: 1em;
+    max-width: 50%;
+}
+
+.rodape-contato a.contato-nao-clicavel {
+    cursor: text;
+}
+
+.rodape-contato > a > i {
+    margin-right: 4px;
 }
 
 
@@ -665,11 +748,14 @@ header {
         background-color: white;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
         gap: 20px;
     }
 
     .ropade-titulo {
         border-right: 1.4px solid #0000002a;
+        border-bottom: none;
+        padding-bottom: 0px;
     }
 
     .ropade-titulo h1 {
@@ -694,6 +780,8 @@ header {
 
     .rodape-navegacao {
         border-right: 1.4px solid #0000002a;
+        border-bottom: none;
+        padding-bottom: 0px;
     }
 
     .rodape-navegacao h1 {
@@ -710,6 +798,10 @@ header {
         cursor: pointer;
         color: #2563eb;
         text-decoration: none;
+    }
+
+    .rodape-contato {
+        padding-bottom: 0px;
     }
 
     .rodape-contato h1 {

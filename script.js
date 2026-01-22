@@ -23,7 +23,7 @@ function ScrollTo(event, id) {
     const posicaoElemento = document.getElementById(id).getBoundingClientRect().top;
 
     // 15% de 100vh = 15vh
-    const offSet = window.innerWidth < 1024 ? window.innerHeight <= 568 ? 310 : 260 : 200;
+    const offSet = window.innerWidth < 1024 ? 240 : 200;
     const offSetPosition = window.pageYOffset + posicaoElemento - offSet;
 
     window.scrollTo({
