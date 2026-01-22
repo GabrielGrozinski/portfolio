@@ -16,181 +16,242 @@
 </head>
 <body>
     
-    <header>
-        <h1 class="titulo"><strong>Gabriel | Grozinski</strong></h1>
-        <nav onmouseleave="fecharCurriculo('curriculo', 'link')" class="link-curriculo" href="#">
-            <div id="link" class="link-fechado">
-                <i class="fa-solid fa-file"></i>
-                <i onclick="abrirCurriculo('curriculo', 'link')" onmouseenter="abrirCurriculo('curriculo', 'link')" id="seta-curriculo" class="fa-solid fa-angle-down"></i>
-            </div>
+    <header id="home">
+        <nav class="cabecalho">
+            <h1 class="titulo"><strong>Gabriel | Grozinski</strong></h1>
 
-            <div id="curriculo" class="link-aberto">
-                <a href="curriculo.docx" download>
-                    Currículo
-                    <i class="fa-solid fa-download"></i>
-                </a>
-            </div>
+            <section class="topicos">
+                <a onclick="ScrollTo(event, 'home')" href="#home" class="texto-topico">Home</a>
+                <a onclick="ScrollTo(event, 'habilidades')" href="#habilidades" class="texto-topico">Habilidades</a>
+                <a onclick="ScrollTo(event, 'projetos')" href="#projetos" class="texto-topico">Projetos</a>
+                <a class="texto-topico">Sobre mim</a>
+                <div onmouseleave="fecharCurriculo('curriculo', 'link')" class="link-curriculo" href="#">
+                    <div id="link" class="link-fechado">
+                        <i class="fa-solid fa-file"></i>
+                        <i onclick="abrirCurriculo('curriculo', 'link')" onmouseenter="abrirCurriculo('curriculo', 'link')" id="seta-curriculo" class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <div id="curriculo" class="link-aberto">
+                        <a href="curriculo.docx" download>
+                            Currículo
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
         </nav>
 
-        <img class="perfil" src="https://avatars.githubusercontent.com/u/209504355?v=4" alt="Gabriel Grozinski">
+        <main class="conteudo-header">
+            <img class="perfil" src="https://avatars.githubusercontent.com/u/209504355?v=4" alt="Gabriel Grozinski">
 
-        <section class="descricao">
-            <h1 class="subtitulo">Olá, Meu Nome é <br> Gabriel Grozinski</h1>
-            <p class="subtitulo-descricao">Eu sou um desenvolvedor full-stack, com experiência em desenvolvimento web e mobile.</p>
-
-            <ul class="lista-contato">
-                <li 
-                id="email"
-                onclick="mudarTexto('email', 'gabrielgrozinski@gmail.com')" 
-                onmouseenter="mudarTexto('email', 'gabrielgrozinski@gmail.com')" 
-                onmouseleave="retornarTexto('email', 'EMAIL')" 
-                class="contato">
-                    EMAIL
-                </li>
-
-                <li 
-                id="telefone"
-                onclick="mudarTexto('telefone', '+55 11 94444-5511')"
-                onmouseenter="mudarTexto('telefone', '+55 11 94444-5511')" 
-                onmouseleave="retornarTexto('telefone', 'TELEFONE')" 
-                class="contato">
-                    TELEFONE
-                </li>
-
-                <li 
-                id="github"
-                onclick="mudarTexto('github', 'https://github.com/GabrielGrozinski')"
-                onmouseenter="mudarTexto('github', 'https://github.com/GabrielGrozinski')" 
-                onmouseleave="retornarTexto('github', 'GITHUB')" 
-                class="contato">
-                    GITHUB
-                </li>
-            </ul>
-        </section>
+            <section class="descricao">
+                <h1 class="subtitulo">Olá, Meu Nome é <br> Gabriel Grozinski</h1>
+                <p class="subtitulo-descricao">Eu sou um desenvolvedor full-stack, com experiência em desenvolvimento web e mobile.</p>
+                <ul class="lista-contato">
+                    <li
+                    id="email"
+                    onclick="mudarTexto('email', 'gabrielgrozinski@gmail.com')"
+                    onmouseenter="mudarTexto('email', 'gabrielgrozinski@gmail.com')"
+                    onmouseleave="retornarTexto('email', 'EMAIL')"
+                    class="contato">
+                        EMAIL
+                    </li>
+                    <li
+                    id="telefone"
+                    onclick="mudarTexto('telefone', '+55 11 94444-5511')"
+                    onmouseenter="mudarTexto('telefone', '+55 11 94444-5511')"
+                    onmouseleave="retornarTexto('telefone', 'TELEFONE')"
+                    class="contato">
+                        TELEFONE
+                    </li>
+                    <a rel="noopener noreferrer" target="_blank" class="link-clicavel" href="https://github.com/GabrielGrozinski">
+                        <li
+                        id="github"
+                        class="contato link">
+                            GITHUB
+                        </li>
+                    </a>
+                    <a rel="noopener noreferrer" target="_blank" class="link-clicavel" href="https://www.linkedin.com/in/gabriel-grozinski/">
+                        <li
+                        id="LinkedIn"
+                        class="contato link">
+                            LINKEDIN
+                        </li>
+                    </a>
+                </ul>
+            </section>
+        </main>
     </header>
 
-    <main>
-        <section>
-            <h1 id="habilidade-titulo">
-                MINHAS HABILIDADES
-            </h1>
+    <main class="container-principal">
+        <h1 id="habilidade-titulo">
+            <span class="linha-decorativa"></span>
+            O QUE EU SEI FAZER
+            <span class="linha-decorativa"></span>
+        </h1>
+        
+        <h1 class="texto-titulo">Minhas Habilidades</h1>
 
+        <section id="habilidades">
             <ul class="lista-habilidade">
                 <li class="item-habilidade">
-                    HTML 5
+                    <span>Lingugem de programação</span>
+                    <strong>HTML 5</strong>
                     <img src="assets/html.png" alt="">
                 </li>
 
                 <li class="item-habilidade">
-                    CSS 3
+                    <span>Estilização web</span>
+                    <strong>CSS 3</strong>
                     <img src="assets/css.png" alt="">
                 </li>
 
                 <li class="item-habilidade">
-                    TypeScript
+                    <span>Tipagem JavaScript</span>
+                    <strong>TypeScript</strong>
                     <img src="assets/typescript.png" alt="">
                 </li>
 
                 <li class="item-habilidade">
-                    React
+                    <span>Biblioteca JavaScript</span>
+                    <strong>React</strong>
                     <img src="assets/react.png" alt="">
                 </li>
 
                 <li class="item-habilidade">
-                    React Native
+                    <span>Desenvolvimento mobile</span>
+                    <strong>React Native</strong>
                     <img src="assets/react native.png" alt="">
                 </li>
 
                 <li class="item-habilidade">
-                    Tailwind
+                    <span>Framework CSS</span>
+                    <strong>Tailwind</strong>
                     <img src="assets/tailwind.png" alt="">
                 </li>
 
                 <li class="item-habilidade">
-                    Supabase
+                    <span>Backend como serviço</span>
+                    <strong>Supabase</strong>
                     <img src="assets/supabase.png" alt="">
                 </li>
 
                 <li class="item-habilidade">
-                    Firebase
+                    <span>Plataforma Google</span>
+                    <strong>Firebase</strong>
                     <img src="assets/firebase.png" alt="">
                 </li>
 
                 <li class="item-habilidade">
-                    Mongo DB
+                    <span>Banco de dados NoSQL</span>
+                    <strong>Mongo DB</strong>
                     <img src="assets/mongodb.png" alt="">
                 </li>
 
                 <li class="item-habilidade">
-                    Axios
+                    <span>Cliente HTTP</span>
+                    <strong>Axios</strong>
                     <img src="assets/axios.png" alt="">
                 </li>
 
                 <li class="item-habilidade">
-                    Node.js
+                    <span>Runtime JavaScript</span>
+                    <strong>Node.js</strong>
                     <img src="assets/node.png" alt="">
                 </li>
 
                 <li class="item-habilidade">
-                    Git e GitHub
+                    <span>Controle de versão</span>
+                    <strong>Git e GitHub</strong>
                     <img src="assets/git.png" alt="">
                 </li>
             </ul>
         </section>
 
-        <section class="projetos-section">
-            <h1 class="projetos-titulo">MEUS PROJETOS</h1>
+        <h1 id="habilidade-titulo">
+            <span class="linha-decorativa"></span>
+            MEU PORTFÓLIO
+            <span class="linha-decorativa"></span>
+        </h1>
+        
+        <h1 class="texto-titulo">Projetos</h1>
 
+        <section id="projetos" class="projetos-section">
             <article class="projeto-article">
-                <picture>
-                    <source
-                    class="imagem-viajour-desktop" 
-                    srcset="assets/viajour-desktop.png"
-                    media="(min-width: 1024px)"
-                    >
-
-                    <img class="imagem-viajour-mobile" src="assets/viajour-mobile.png" alt="">
-                </picture>
+                <img class="imagem-mobile" src="assets/viajour-mobile.png" alt="">
 
                 <div class="card-projeto">
                     <h2 class="titulo-projeto">ViaJour</h2>
-                    <h3 class="subtitulo-projeto">Site de viagens (React)</h3>
+                    <h3 class="subtitulo-projeto">Site de viagens</h3>
 
                     <div class="card-botoes">
-                        <button id="botao-site">
+                        <a rel="noopener noreferrer" target="_blank" href="https://gabrielgrozinski.github.io/ViaJour/#" id="botao-site">
                             Ver site
-                        </button>
+                        </a>
 
-                        <button id="botao-github">
+                        <a rel="noopener noreferrer" target="_blank" href="https://github.com/GabrielGrozinski/ViaJour" id="botao-github">
                             <i class="fa-brands fa-github"></i> GitHub
-                        </button>
+                        </a>
                     </div>
                 </div>
             </article>
 
             <article class="projeto-article">
-                <picture>
-                    <source
-                    class="imagem-viajour-desktop" 
-                    srcset="assets/viajour-desktop.png"
-                    media="(min-width: 1024px)"
-                    >
-
-                    <img class="imagem-viajour-mobile" src="assets/mistura-boa-mobile.png" alt="">
-                </picture>
+                <img class="imagem-mobile" src="assets/mistura-boa-mobile.png" alt="">
 
                 <div class="card-projeto">
                     <h2 class="titulo-projeto">Mistura Boa</h2>
-                    <h3 class="subtitulo-projeto">Aplicativo de receitas (React Native)</h3>
+                    <h3 class="subtitulo-projeto">Aplicativo de receitas</h3>
 
                     <div class="card-botoes">
-                        <button id="botao-aplicativo">
+                        <a rel="noopener noreferrer" target="_blank" href="https://github.com/GabrielGrozinski/Mistura-Boa" id="botao-aplicativo">
                             <i class="fa-brands fa-github"></i> GitHub
-                        </button>
+                        </a>
                     </div>
                 </div>
             </article>
         </section>
+
+        <h1 id="habilidade-titulo">
+            <span class="linha-decorativa"></span>
+            TRABALHOS ANTERIORES
+            <span class="linha-decorativa"></span>
+        </h1>
+        
+        <h1 class="texto-titulo">Outros Projetos</h1>
+
+        <section class="projetos-section">
+            <article class="outro-projeto-article">
+                <img class="imagem-mobile" src="assets/formiga-livro.png" alt="">
+
+                <div class="card-projeto">
+                    <h2 class="titulo-projeto">A Escola Açucarada das Formigas</h2>
+                    <h3 class="subtitulo-projeto">Livro Infantil</h3>
+
+                    <div class="card-botoes">
+                        <a rel="noopener noreferrer" target="_blank" href="https://dreambook.com.br/a-escola-acucarada-das-formigas.html" id="botao-livro">
+                            Ver livro
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="outro-projeto-article">
+                <img class="imagem-mobile" src="assets/elefante-livro.png" alt="">
+
+                <div class="card-projeto">
+                    <h2 class="titulo-projeto">O que Tem Nessa Cabeça, Elefante?</h2>
+                    <h3 class="subtitulo-projeto">Livro Infantil</h3>
+
+                    <div class="card-botoes">
+                        <a rel="noopener noreferrer" target="_blank" href="https://dreambook.com.br/o-que-tem-nessa-cabeca-elefante.html" id="botao-livro">
+                            Ver livro
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+
     </main>
 
     <script src="script.js"></script>

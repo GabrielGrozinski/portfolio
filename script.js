@@ -17,3 +17,18 @@ function fecharCurriculo(id, id2) {
     document.getElementById(id).classList.remove('ativado');
     document.getElementById(id2).classList.remove('ativado');
 }
+
+function ScrollTo(event, id) {
+    event.preventDefault();
+    const posicaoElemento = document.getElementById(id).getBoundingClientRect().top;
+
+    // 15% de 100vh = 15vh
+    const offSet = window.innerWidth < 1024 ? window.innerHeight <= 568 ? 310 : 260 : 200;
+    const offSetPosition = window.pageYOffset + posicaoElemento - offSet;
+
+    window.scrollTo({
+        top: offSetPosition,
+        behavior: "smooth"
+    });
+
+}
