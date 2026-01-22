@@ -24,7 +24,7 @@
                 <a onclick="ScrollTo(event, 'home')" href="#home" class="texto-topico">Home</a>
                 <a onclick="ScrollTo(event, 'habilidades')" href="#habilidades" class="texto-topico">Habilidades</a>
                 <a onclick="ScrollTo(event, 'projetos')" href="#projetos" class="texto-topico">Projetos</a>
-                <a class="texto-topico">Sobre mim</a>
+                <a onclick="ScrollTo(event, 'sobre-mim')" href="#sobre-mim" class="texto-topico">Sobre mim</a>
                 <div onmouseleave="fecharCurriculo('curriculo', 'link')" class="link-curriculo" href="#">
                     <div id="link" class="link-fechado">
                         <i class="fa-solid fa-file"></i>
@@ -211,7 +211,7 @@
             </article>
         </section>
 
-        <h1 id="habilidade-titulo">
+        <h1 id="projeto-titulo">
             <span class="linha-decorativa"></span>
             TRABALHOS ANTERIORES
             <span class="linha-decorativa"></span>
@@ -219,7 +219,7 @@
         
         <h1 class="texto-titulo">Outros Projetos</h1>
 
-        <section class="projetos-section">
+        <section id="outros-projetos" class="projetos-section">
             <article class="outro-projeto-article">
                 <img class="imagem-mobile" src="assets/formiga-livro.png" alt="">
 
@@ -251,8 +251,91 @@
             </article>
         </section>
 
+        <h1 id="sobre-mim-titulo">
+            <span class="linha-decorativa"></span>
+            QUEM EU SOU
+            <span class="linha-decorativa"></span>
+        </h1>
+        
+        <h1 class="texto-titulo">Sobre Mim</h1>
 
+        <section id="sobre-mim">
+            <article class="sobre-mim-article">
+                <div class="foto-grid">
+                    <img src="https://avatars.githubusercontent.com/u/209504355?v=4" alt="">
+                </div>
+
+                <div class="texto-grid">
+                    <h1>Olá! Eu sou Gabriel Grozinski.</h1>
+                    <p>
+                        Comecei minha jornada na <strong>programação em 2020</strong>, durante a pandemia. Na época, cheguei a estudar o assunto, mas acabei seguindo outro caminho.
+
+                        <div class="container-quebra">
+                            <span class="quebra">
+                            <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+                                <polyline
+                                points="0,10 10,0 20,10 30,0 40,10 50,0 60,10 70,0 80,10 90,0 100,10"
+                                />
+                            </svg>
+                            </span>
+                        </div>
+
+                        Foquei em uma outra grande paixão: <strong>escrever livros</strong>. Durante esse período, escrevi e publiquei alguns títulos, o que me permitiu investir em equipamentos novos, fundamentais para que eu pudesse retornar aos estudos em programação.
+
+                        <div class="container-quebra">
+                            <span class="quebra">
+                            <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+                                <polyline
+                                points="0,10 10,0 20,10 30,0 40,10 50,0 60,10 70,0 80,10 90,0 100,10"
+                                />
+                            </svg>
+                            </span>
+                        </div>
+
+                        Com o apoio da minha irmã e do meu cunhado <strong>(ambos programadores)</strong>, tive contato com novos conhecimentos e cursos que ajudaram a preencher lacunas importantes no meu aprendizado.
+
+                        <div class="container-quebra">
+                            <span class="quebra">
+                            <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+                                <polyline
+                                points="0,10 10,0 20,10 30,0 40,10 50,0 60,10 70,0 80,10 90,0 100,10"
+                                />
+                            </svg>
+                            </span>
+                        </div>
+
+                        Hoje, projetos como o <strong>Mistura Boa</strong> refletem fortemente meu lado criativo e minha visão sobre como manter o usuário engajado e gerar valor.
+                        <br> 
+                        Já o <strong>ViaJour</strong> explora essa criatividade aliada a um foco maior na parte técnica e estrutural do desenvolvimento.
+                    </p>
+                </div>
+            </article>
+        </section>
     </main>
+
+    <footer>
+        <div class="ropade-titulo">
+            <h1>Gabriel Grozinski</h1>
+            <h2>Desenvolvedor Full-Stack</h2>
+            <h3><i class="fa-regular fa-copyright"></i> 2026 - Todos os direitos reservados</h3>
+        </div>
+
+        <div class="rodape-navegacao">
+            <h1>Navegação</h1>
+            <a onclick="ScrollTo(event, 'home')" href="#home">Home</a>
+            <a onclick="ScrollTo(event, 'habilidades')" href="#habilidades">Habilidades</a>
+            <a onclick="ScrollTo(event, 'projetos')" href="#projetos">Projetos</a>
+            <a onclick="ScrollTo(event, 'sobre-mim')" href="#sobre-mim">Sobre mim</a>
+        </div>
+
+        <div class="rodape-contato">
+            <h1>Contato</h1>
+            <a class="contato-nao-clicavel"><i class="fa-solid fa-square-envelope"></i> gabrielgrozinski@gmail.com</a>
+            <a><i class="fa-brands fa-square-github"></i> GitHub</a>
+            <a><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a class="contato-nao-clicavel"><i class="fa-solid fa-square-phone"></i> +55 11 94444-5511</a>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 

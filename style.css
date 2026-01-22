@@ -15,8 +15,8 @@ html {
 }
 
 body {
-    background-color: white;
-    padding-bottom: 80vh;
+    background-image: url(assets/fundo.png);
+    background-attachment: fixed;
 }
 
 header {
@@ -152,7 +152,7 @@ header {
     padding: 0px 10px;
 }
 
-#habilidade-titulo, #projeto-titulo {
+#habilidade-titulo, #projeto-titulo, #sobre-mim-titulo {
     margin-top: 10vh;
     text-align: center;
     font-size: 0.8em;
@@ -221,7 +221,7 @@ header {
     max-width: 40px;
 }
 
-#habilidades, #projetos {
+#habilidades, #projetos, #outros-projetos {
     margin-bottom: 20vh;
 }
 
@@ -330,6 +330,81 @@ header {
     text-shadow: 1px 1px 1px #0000002a;
     width: 100%;
 }
+
+#sobre-mim {
+    padding: 0px 20px;
+}
+
+.sobre-mim-article {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 300px auto;
+    border-radius: 6px;
+    box-shadow: 0px 0px 3px #0000002a;
+}
+
+.foto-grid {
+    grid-row: 1;
+    height: 100%;
+    width: 100%;
+    border-bottom: 1px solid #0f172a1a;
+    display: flex;
+    border-radius: 6px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f4;
+}
+
+.foto-grid img {
+    border-radius: 50%;
+    max-height: 250px;
+    max-width: 250px;
+}
+
+.texto-grid {
+    background-color: white;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.texto-grid h1 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+}
+
+.texto-grid p {
+    line-height: 24px;
+}
+
+.container-quebra {
+    display: flex;
+    margin: 9px 0;
+    justify-content: center;
+}
+
+.quebra {
+  display: block;
+  width: 100%;
+  transform: translateY(25%);
+}
+
+.quebra svg {
+  width: 100%;
+  height: 20px;
+}
+
+.quebra polyline {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  opacity: 0.6;
+}
+
+
 
 @media screen and (min-width: 321px) {
 .outro-projeto-article {
@@ -552,6 +627,112 @@ header {
 
     .outro-projeto-article {
         padding-bottom: 0px;
+    }
+
+    .sobre-mim-article {
+        grid-template-rows: auto;
+        grid-template-columns: 30% 1fr;
+    }
+
+    .foto-grid {
+        border-bottom: none;
+        border-right: 1px solid #0f172a1a;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 6px;
+    }
+
+    .foto-grid img {
+        max-height: 300px;
+        max-width: 300px;
+    }
+
+    .texto-grid {
+        background-color: white;
+        border-radius: 6px;
+        padding: 20px;
+    }
+
+    .texto-grid h1 {
+        margin-bottom: 12px;
+        font-size: 1.6em;
+    }
+
+    footer {
+        margin-top: 20vh;
+        padding: 30px;
+        width: 100%;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .ropade-titulo {
+        border-right: 1.4px solid #0000002a;
+    }
+
+    .ropade-titulo h1 {
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    .ropade-titulo h2 {
+        font-weight: 300;
+        font-size: 0.9em;
+        max-width: 80%;
+        margin: 6px 0px 20px 0px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #0f172a1a;
+    }
+
+    .ropade-titulo h3 {
+        font-weight: 300;
+        font-size: 0.8em;
+        letter-spacing: 1px;
+    }
+
+    .rodape-navegacao {
+        border-right: 1.4px solid #0000002a;
+    }
+
+    .rodape-navegacao h1 {
+        font-weight: 600;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .rodape-navegacao a {
+        display: block;
+        font-weight: 400;
+        font-size: 1em;
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: #2563eb;
+        text-decoration: none;
+    }
+
+    .rodape-contato h1 {
+        font-weight: 600;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .rodape-contato a {
+        display: block;
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: #06b6d4;
+        text-decoration: none;
+        font-size: 1em;
+    }
+
+    .rodape-contato a.contato-nao-clicavel {
+        cursor: text;
+    }
+
+    .rodape-contato > a > i {
+        margin-right: 4px;
     }
 
 }
